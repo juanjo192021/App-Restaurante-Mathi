@@ -1,0 +1,145 @@
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    line-height: 1.42857143;
+    font-size: 16px;
+}
+.nav-barra-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 76px;
+    background: #909090;
+    box-shadow: 0 6px 6px rgba(0,0,0,.08);
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+}
+.nav-elementos-izquierda {
+    flex: 1;
+    height: 100%;
+}
+.nav-logo-restaurante{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 76px;
+}
+.enlace-logo-restaurante {
+    margin-right: 25px;
+    position: relative;
+    height: 80px;
+    padding: 3px 14px 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    cursor: pointer;
+}
+.logo-restaurante {
+    width: 82.38px;
+    height: 70px;
+}
+img {
+    vertical-align: middle;
+    border: 0;
+}
+.nav-elementos-izquierda, .nav-elementos-derecha {
+    display: flex;
+    align-items: center;
+}
+.nav-elementos-derecha a b{
+    font-size: 17px;
+    font-weight: 900;
+}
+.nav-buscador {
+    position: relative;
+    border: 1.5px solid #000;
+    border-radius: 20px;
+    background: #fff;
+    margin:  0 40px 0 0;
+}
+/* input[type=text], select, textarea {
+    line-height: 1;
+
+    color: inherit;
+    font: inherit;
+    margin: 0;
+
+    font-size: inherit;
+} */
+.nav-input {
+    padding: 11px 20px 7px 16px;
+    width: 261px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    font-size: 17px;
+}
+.nav-btn-search{
+    background: transparent;
+    position: absolute;
+    top: -1px;
+    right: 3px;
+    height: 100%;
+    border: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 0 9px;
+    cursor: pointer;
+}
+.nav-btn-search i {
+    pointer-events: none;
+    width: 17px;
+}
+.nav-btn-search i{
+    font-size: 17px;
+}
+i{
+    vertical-align: middle;
+    border: 0;
+    font-size: 22px;
+    color: #000;
+}
+.nav-zona-iconos{
+    display: flex;
+    align-items: flex-end;
+}
+a{
+    text-decoration: none;
+    background-color: transparent;
+}
+.nav-zona-iconos b {
+    padding: 0 5px 0 45px;
+    margin: auto 0;
+    font-size: 18px;
+    color: #000;
+    line-height: 1;
+    display: inline-block;
+}
+.nav-div-bag {
+    position: relative;
+    margin-right: 7px;
+    margin-left: 60px;
+}
+.contador-bag {
+    color: #fff;
+    line-height: 1;
+    border-radius: 50px;
+    font-size: 11px;
+    width: 20px;
+    background: #00833e;
+    height: 19px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 14px;
+    top: -7px;
+    cursor: pointer;
+}
