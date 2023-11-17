@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="https://kit.fontawesome.com/abf5d5b8a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar p-0 navbar-expand-md navbar-light bg-white sticky-top border-bottom box-shadow">
+            <div class=" bg-dark container-fluid px-3 py-1 flex-nowrap" id="id-nav-subcontainer">
+                <div class="container-fluid p-0 text-center" id="id_container-img-home">
+                    <div class="row align-items-center">
+                        <div class="col-2 px-1 d-flex justify-content-start">
+                            <img class="logo-restaurante" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/d7139db.svg" alt="">
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-7 pe-0 d-flex justify-content-center justify-content-sm-end justify-content-lg-end ">
+                            <form class="d-flex justify-content-start align-items-center" id="id-container-buscar">
+                                <input class="form-control class-comp-buscar" id="id-input-buscar" type="search" placeholder="Buscar Producto" aria-label="Search">
+                                <button class="btn btn-outline-success class-comp-buscar" id="id-btn-buscar" type="submit">
+                                    <span>
+                                        <i class="fa-solid fa-magnifying-glass" id="id-logo-buscar"></i>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-3 d-flex justify-content-center justify-content-md-end align-items-center">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="class-icons-nav mx-1 mx-sm-3" id="id-logo-cart">
+                                    <a class="nav-link text-white" id="id-link-listaCarrito" href="@Url.Action("Carrito","Tienda")">
+                                        <span class="d-none">UBICACIONES</span>
+                                        <i class="d-none d-sm-inline logo-navs fa-solid fa-location-dot me-1"></i>
+                                    </a>
+                                </div>
+                                <div class="class-icons-nav mx-1 mx-sm-3" id="id-logo-cart">
+                                    <a class="d-flex nav-link text-dark" id="id-link-listaCarrito" href="#!">
+                                        <i class="logo-navs fa-solid fa-bag-shopping me-1"></i>
+                                        <span class="bg-white text-dark fw-bold" id="cantidadcarrito">0</span>
+                                    </a>
+                                </div>
+                                <div class="class-icons-nav ms-1 ms-sm-2" id="id-logo-user">
+                                    <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
+                                        <li class="nav-item dropdown class-li-inicio">
+                                            <a class="nav-link dropdown-toggle" id="id-link-inicioSesion" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="logo-navs fa-solid fa-circle-user"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="#!"><b>Iniciar Sesion</b></a></li>
+                                                <li><a class="dropdown-item" href="#!">Registrate</a></li>
+                                                <!-- <li><hr class="dropdown-divider"/></li>
+                                                <li><a class="dropdown-item" href="#!">Cerrar Sesion</a></li> -->
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="row justify-content-center my-5">
+            <div class="col-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Iniciar Sesion</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="@Url.Action("Login","Acceso")" method="post">
+                           
+                            <div class="mb-3">
+                                <label asp-for="correo" class="form-label">Correo Electrónico</label>
+                                <input asp-for="correo" type="email" class="form-control" name="correo" autocomplete="off" />
+                                <span asp-validation-for="correo" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="clave">Contraseña</label>
+                                <input asp-for="clave" type="password" class="form-control" name="clave" autocomplete="off" />
+                                <span asp-validation-for="clave" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-grid">
+                                    <button class="btn btn-primary" type="submit">Ingresar</button>
+                                    <a class="btn btn-link" asp-controller="Acceso" asp-action="Registrar">No tienes cuenta? Registrate!</a>
+        
+                                    <a class="btn btn-link" href="@Url.Action("Restablecer","Acceso" )">Has olvidado tu contraseña?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="position-static border-top footer text-muted bg-dark" id="id-footer-container">
+        <div class="container-fluid text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="d-none d-md-flex flex-md-column align-items-md-center justify-content-md-center col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <div>
+                        <a href="#">
+                            <img style="width:120px;" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/b972848.svg" />
+                        </a>
+                        <p >
+                            En tu casa o en la nuestra no importa donde estés, siempre vamos a engreirte con el gran sabor que nos caracteriza. ¡Gracias por preferirnos!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">MAPA DEL SITIO</h5>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Conócenos</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Carta</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Promociones</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Locales</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Nosotros</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Venta Corporativa</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Eventos/Cumpleaños</a>
+                    </p>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">Legal</h5>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Términos y Condiciones</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Políticas de Privacidad</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Legales</a>
+                    </p>
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">Encuesta</h5>
+                    <p>
+                        <a>
+                            <img style="width:100px;" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/a69d57a.jpg" />
+                        </a>
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">FORMAS DE PAGO</h5>
+                    <div class="d-flex flex-row justify-content-around">
+                        <p class="text-white">
+                
+                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/e001781.svg" alt="">
+                        
+                        </p>
+                        <p class="text-white">
+                            
+                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/3cdfe69.svg" alt="">
+                            
+                        </p>
+                        <p class="text-white">
+                         
+                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/f81b40e.svg" alt="">
+                            
+                        </p>
+                        <p class="text-white">
+                         
+                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/2d76e88.svg" alt="">
+                        </p>
+                    </div>
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">Siguenos</h5>
+                    <div class="col">
+                        <div class="text-center ">
+                            <ul class="list-unstyled list-inline d-flex justify-content-around">
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fa-brands fa-tiktok"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fab fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mb-4" />
+            <div class="row align-items-center">
+                <div class="col d-flex justify-content-center">
+                    <p class="text-white">
+                        Copyrigth ©2023 Todo los derechos reservados:
+                        <a href="#">
+                            <strong class="text-white">Restaurante Don Mathi</strong>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
