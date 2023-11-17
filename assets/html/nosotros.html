@@ -6,166 +6,219 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
     <script src="https://kit.fontawesome.com/abf5d5b8a0.js" crossorigin="anonymous"></script>
     <title>Nosotros</title>
 </head>
 <body>
-    <header class="header-container">
-        <nav class="nav-barra-top">
-            <div class="nav-elementos-izquierda">
-                <div class="nav-logo-restaurante">
-                    <a class="enlace-logo-restaurante" href="../../index.html">
-                        <img class="logo-restaurante" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/d7139db.svg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="nav-elementos-derecha">
-                <div class="nav-buscador">
-                    <input class="nav-input" type="text" placeholder="Buscar">
-                    <button class="nav-btn-search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-                <a class="nav-zona-iconos" href="">
-                    <b>Locales</b>
-                    <i class="logo-navs fa-solid fa-location-dot"></i>
-                </a>
-                <a class="nav-zona-iconos" href="">
-                    <b>Ingresa o Registrate</b>
-                    <i class="logo-navs fa-solid fa-circle-user"></i>
-                </a>
-                <div class="nav-div-bag">
-                    <a class="nav-zona-iconos" href="">
-                        <span class="contador-bag">0</span>
-                        <i class="logo-navs fa-solid fa-bag-shopping"></i>
-                    </a>
+    <header>
+        <nav class="navbar p-0 navbar-expand-md navbar-light bg-white sticky-top border-bottom box-shadow">
+            <div class=" bg-dark container-fluid px-3 py-1 flex-nowrap" id="id-nav-subcontainer">
+                <div class="container-fluid p-0 text-center" id="id_container-img-home">
+                    <div class="row align-items-center">
+                        <div class="col-2 px-1 d-flex justify-content-start">
+                            <img class="logo-restaurante" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/d7139db.svg" alt="">
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-7 pe-0 d-flex justify-content-center justify-content-sm-end justify-content-lg-end ">
+                            <form class="d-flex justify-content-start align-items-center" id="id-container-buscar">
+                                <input class="form-control class-comp-buscar" id="id-input-buscar" type="search" placeholder="Buscar Producto" aria-label="Search">
+                                <button class="btn btn-outline-success class-comp-buscar" id="id-btn-buscar" type="submit">
+                                    <span>
+                                        <i class="fa-solid fa-magnifying-glass" id="id-logo-buscar"></i>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-3 d-flex justify-content-center justify-content-md-end align-items-center">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="class-icons-nav mx-1 mx-sm-3" id="id-logo-cart">
+                                    <a class="nav-link text-white" id="id-link-listaCarrito" href="@Url.Action("Carrito","Tienda")">
+                                        <span class="d-none">UBICACIONES</span>
+                                        <i class="d-none d-sm-inline logo-navs fa-solid fa-location-dot me-1"></i>
+                                    </a>
+                                </div>
+                                <div class="class-icons-nav mx-1 mx-sm-3" id="id-logo-cart">
+                                    <a class="d-flex nav-link text-dark" id="id-link-listaCarrito" href="#!">
+                                        <i class="logo-navs fa-solid fa-bag-shopping me-1"></i>
+                                        <span class="bg-white text-dark fw-bold" id="cantidadcarrito">0</span>
+                                    </a>
+                                </div>
+                                <div class="class-icons-nav ms-1 ms-sm-2" id="id-logo-user">
+                                    <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
+                                        <li class="nav-item dropdown class-li-inicio">
+                                            <a class="nav-link dropdown-toggle" id="id-link-inicioSesion" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="logo-navs fa-solid fa-circle-user"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="IniciarSesion.html"><b>Iniciar Sesion</b></a></li>
+                                                <li><a class="dropdown-item" href="#!">Registrate</a></li>
+                                                <!-- <li><hr class="dropdown-divider"/></li>
+                                                <li><a class="dropdown-item" href="#!">Cerrar Sesion</a></li> -->
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="main-div-info">
-            <div class="div-contenedor-info">
-                <h1 class="titulo-info">Nosotros</h1>
-                <div class="div-contenedor-parrafos">
-                    <p>
-                        Decir que somos una empresa peruana con 35 años de experiencia en el mercado de restaurantes consolida nuestra trayectoria, pero no lo dice todo, porque Rokys es mucho más.
-                    </p>
-                    <p>
-                        Aún está fresco en nuestra memoria aquel primer local que fundamos en 1985 en Zárate. Un espacio acogedor con solo 15 mesas y 7 colaboradores que iniciaron lo que hoy se fortalece como la primera cadena de restaurantes que atrae a más de un millón de clientes al mes con más de 75 locales en el país.
-                    </p>
-                    <p>
-                        Tener bajo nuestra responsabilidad a uno de los emblemas gastronómicos más reconocidos dentro y fuera de Perú, nos hace sentir orgullosos. El único sabor del Pollo a la Brasa Rokys es valorado por nuestros clientes a lo largo del tiempo y trasciende incluso nuestras fronteras llegando a Bolivia donde los comensales pueden disfrutar del sabor de Rokys en los más de 6 locales situados en Santa Cruz.
-                    </p>
-                    <p>
-                        Forjamos hitos trascendentales en nuestra historia, pero la principal es el reconocimiento que tenemos de nuestros clientes. Hemos sido parte de su vida en todos estos años y lo agradecemos, no solo su presencia, sino también sus comentarios, sugerencias y principalmente sus constantes visitas, llamadas y pedidos.
-                    </p>
-                </div>
+        <div class="card container border-0 my-3" id="main-container">
+            <div class="card-header border-0 bg-white">
+                <h1 class="text-center">Nosotros</h1>
             </div>
-        </div>
+            <div class="card-body">
+                <p>
+                    Decir que somos una empresa peruana con 35 años de experiencia en el mercado de restaurantes consolida nuestra trayectoria, pero no lo dice todo, porque Rokys es mucho más.
+                </p>
+                <p>
+                    Aún está fresco en nuestra memoria aquel primer local que fundamos en 1985 en Zárate. Un espacio acogedor con solo 15 mesas y 7 colaboradores que iniciaron lo que hoy se fortalece como la primera cadena de restaurantes que atrae a más de un millón de clientes al mes con más de 75 locales en el país.
+                </p>
+                <p>
+                    Tener bajo nuestra responsabilidad a uno de los emblemas gastronómicos más reconocidos dentro y fuera de Perú, nos hace sentir orgullosos. El único sabor del Pollo a la Brasa Rokys es valorado por nuestros clientes a lo largo del tiempo y trasciende incluso nuestras fronteras llegando a Bolivia donde los comensales pueden disfrutar del sabor de Rokys en los más de 6 locales situados en Santa Cruz.
+                </p>
+                <p>
+                    Forjamos hitos trascendentales en nuestra historia, pero la principal es el reconocimiento que tenemos de nuestros clientes. Hemos sido parte de su vida en todos estos años y lo agradecemos, no solo su presencia, sino también sus comentarios, sugerencias y principalmente sus constantes visitas, llamadas y pedidos.
+                </p>
+          </div>
     </main>
-    <footer id="zona-footer" class="zona-footer">
-        <div class="p-div-footer">
-            <div class="div-container-modulos">
-                <div class="modulo-info">
-                    <p >
-                        En tu casa o en la nuestra no importa donde estés, siempre vamos a engreirte con el gran sabor que nos caracteriza. ¡Gracias por preferirnos!
-                    </p>
-                    <div class="container-logo-footer">
-                        <a href="">
-                            <img class="img-logo-principal"src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/b972848.svg" alt="">
+    <footer class="position-static border-top footer text-muted bg-dark" id="id-footer-container">
+        <div class="container-fluid text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="d-none d-md-flex flex-md-column align-items-md-center justify-content-md-center col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <div>
+                        <a href="#">
+                            <img style="width:120px;" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/b972848.svg" />
                         </a>
+                        <p >
+                            En tu casa o en la nuestra no importa donde estés, siempre vamos a engreirte con el gran sabor que nos caracteriza. ¡Gracias por preferirnos!
+                        </p>
                     </div>
                 </div>
-                <ul class="modulo-ul-footer">
-                    <h3>MAPA DEL SITIO</h3>
-                    <div class="modulo-container-items">
-                        <li class="items-li-footer">
-                            <a class="redireccion-mapa-sitio" href="">Carta</a>
-                        </li>
-                        <li class="items-li-footer">
-                            <a class="redireccion-mapa-sitio" href="">Promociones</a>
-                        </li>
-                        <li class="items-li-footer">
-                            <a class="redireccion-mapa-sitio" href="">Locales</a>
-                        </li>
-                        <li class="items-li-footer">
-                            <a class="redireccion-mapa-sitio" href="">Nosotros</a>
-                        </li>
-                        <li class="items-li-footer">
-                            <a class="redireccion-mapa-sitio" href="">Venta corporativiva</a>
-                        </li>
-                        <li class="items-li-footer">
-                            <a class="redireccion-mapa-sitio" href="">Eventos/Cumpleaños</a>
-                        </li>
+                <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">MAPA DEL SITIO</h5>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Conócenos</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Carta</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Promociones</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Locales</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Nosotros</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Venta Corporativa</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Eventos/Cumpleaños</a>
+                    </p>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">Legal</h5>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Términos y Condiciones</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Políticas de Privacidad</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white link-underline link-underline-opacity-0">Legales</a>
+                    </p>
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">Encuesta</h5>
+                    <p>
+                        <a>
+                            <img style="width:100px;" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/a69d57a.jpg" />
+                        </a>
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">FORMAS DE PAGO</h5>
+                    <div class="d-flex flex-row justify-content-around">
+                        <p class="text-white">
+                
+                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/e001781.svg" alt="">
+                        
+                        </p>
+                        <p class="text-white">
+                            
+                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/3cdfe69.svg" alt="">
+                            
+                        </p>
+                        <p class="text-white">
+                         
+                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/f81b40e.svg" alt="">
+                            
+                        </p>
+                        <p class="text-white">
+                         
+                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/2d76e88.svg" alt="">
+                        </p>
                     </div>
-                </ul>
-                <ul class="modulo-ul-footer">
-                    <h3>LEGAL</h3>
-                    <div class="modulo-container-items">
-                        <li class="items-li-footer">
-                            <a href="">Términos y condiciones</a>
-                        </li>
-                        <li class="items-li-footer">
-                            <a href="">Políticas de privacidad</a>
-                        </li>
-                        <li class="items-li-footer">
-                            <a href="">Legales</a>
-                        </li>
-                    </div>
-                    <div class="modulo-encuesta">
-                        <h3>ENCUESTA</h3>
-                        <div class="div-container-img-encuesta">
-                            <a href="">
-                                <img class="footer-img-encuesta" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/a69d57a.jpg" alt="">
-                            </a>
+                    <h5 class="text-uppercase mb-4 fw-bold text-white">Siguenos</h5>
+                    <div class="col">
+                        <div class="text-center ">
+                            <ul class="list-unstyled list-inline d-flex justify-content-around">
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fa-brands fa-tiktok"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fab fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </ul>
-                <div class="modulo-fp-lr">
-                    <h3>FORMAS DE PAGO</h3>
-                    <div class="container-img-fp">
-                        <span>
-                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/e001781.svg" alt="">
-                        </span>
-                        <span>
-                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/3cdfe69.svg" alt="">
-                        </span>
-                        <span>
-                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/f81b40e.svg" alt="">
-                        </span>
-                        <span>
-                            <img class="footer-img-fp" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/2d76e88.svg" alt="">
-                        </span>
-                    </div>
-                    <h3>LIBRO DE RECLAMACIONES</h3>
-                    <div class="container-img-lr">
-                        <a href="">
-                            <img class="footer-img-lr"src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/3c486dc.jpg" alt="">
-                        </a>
-                    </div>
-                    <h3>SIGUENOS EN:</h3>
-                    <div class="container-img-redes">
-                        <ul class="ul-container-img-redes">
-                            <li class="li-container-img-redes">
-                                <a href="">
-                                    <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
-                                </a>
-                            </li>
-                            <li class="li-container-img-redes">
-                                <a href="">
-                                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
-            <div class="div-container-derechos">
-                <p>@ROKY'S2020 todos los derechos reservados</p>
+            <hr class="mb-4" />
+            <div class="row align-items-center">
+                <div class="col d-flex justify-content-center">
+                    <p class="text-white">
+                        Copyrigth ©2023 Todo los derechos reservados:
+                        <a href="#">
+                            <strong class="text-white">Restaurante Don Mathi</strong>
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
