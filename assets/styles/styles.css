@@ -7,12 +7,6 @@ body{
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-size: 16px;
 }
-
-
-.logo-restaurante {
-    width: 82.38px;
-    height: 70px;
-}
 i{
     vertical-align: middle;
     color: #fff;
@@ -30,9 +24,10 @@ i{
 
 @media screen and (min-width: 1025px){
     .logo-restaurante {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        width: 70px;
+        padding-top: 10px;
+        padding-left:10px ;
+        padding-bottom: 10px;
+        width: 150px;
     }
     i{
         font-size: 30px;

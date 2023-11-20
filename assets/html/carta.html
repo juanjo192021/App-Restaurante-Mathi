@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/98270ba09b.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-carta.css">
+    <title>Donde Mathi Carta</title>
+    <link rel="icon" href="Imagenes/icon-restaurant.png">
+</head>
+<body>
+    <header class="class-header">
+        <a href="principal.html"><img class="icon-restaurant" src="Imagenes/icon-restaurant.png" alt="Restaurante Donde Mathi"></a>
+        <div class="class-buscador">
+            <input type="text" placeholder="Buscar">
+            <div class="btn-buscar">
+                <a class="style-icon" href="#link-buscador"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+        <div class="class-login">
+            <a class="link-header" href="#link-login"><strong>Ingresa o Registrate</strong></a>
+            <div class="btn-login">
+                <a class="style-login" href="#link-login"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+        <div class="class-online">
+            <button class="btn-pide">¡Pide Online!</button>
+        </div>
+    </header>
+    <div class="class-carta">
+        <div class="text-carta">
+            <a class="link-opcion-menu">Parrillas</a>
+            <a class="link-opcion-menu">Fucion Criolla</a>
+            <a class="link-opcion-menu">Broaster</a>
+            <a class="link-opcion-menu">Hamburguesa</a>
+            <a class="link-opcion-menu">Ensaladas</a>
+            <a class="link-opcion-menu">Desayunos</a>
+            <a class="link-opcion-menu">Menus</a>
+        </div>
+    </div>
+    <div class="filtrar-productos">
+        <div class="busca">
+            <div class="buscar">
+                <input type="text" placeholder="Buscar productos" class="input-buscar">
+                <div class="btn-buscador">
+                    <a class="style-buscar"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="filtrar">
+            <div class="buscar">
+                <input type="text" placeholder="Ordenar por" id="texto-ordenar" class="input-ordenar">
+                <div class="btn-buscador">
+                    <a class="style-ordenar" onclick="toggleOpcionFiltrar()"><i class="fa-solid fa-caret-down"></i></a>
+                </div>
+            </div>
+            <div id="opcion-filtrar">
+                <a href="#" class="op-filter" onclick="cambiarTexto(this)">Los más pedidos</a>
+                <a href="#" class="op-filter" onclick="cambiarTexto(this)">Ascendente Alfabeticamente</a>
+                <a href="#" class="op-filter" onclick="cambiarTexto(this)">Descendente Alfabeticamente</a>
+                <a href="#" class="op-filter" onclick="cambiarTexto(this)">De menor a mayor precio</a>
+                <a href="#" class="op-filter" onclick="cambiarTexto(this)">De mayor a menor precio</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function cambiarTexto(elemento) {
+        var nuevoTexto = elemento.innerHTML;
+        document.getElementById("texto-ordenar").value = nuevoTexto;
+        toggleOpcionFiltrar();
+    }
+        function toggleOpcionFiltrar() {
+        var opcionFiltrar = document.getElementById('opcion-filtrar');
+        if (opcionFiltrar.style.display === 'none') {
+            opcionFiltrar.style.display = 'block';
+        } else {
+            opcionFiltrar.style.display = 'none';
+        }
+    }
+    </script>
+    <div class="content-promocion">
+        <div class="promocion">
+            <img class="img-promocion" src="https://content.emarket.pe/common/collections/standard/ad/47/ad479fed-d307-49d4-b4dc-6d038d66b488.jpg" alt="promocion-1">
+            <div class="text-promocion">
+                <p class="titulo-promocion">1/4 DE POLLO + PAPAS</p>
+                <div class="content-especificacion">
+                    <div class="text-descripcion">
+                        <p>CYBER ROKYS 1/4 POLLO + PAPAS</p>
+                    </div>
+                    <div class="text-precio">
+                        <p>S/21.90</p>
+                    </div>
+                </div>
+                <a class="link-combo" href="#"><button class="btn-promocion">Comprar</button></a>
+                <a class="link-terminos" href="#"><span>Terminos y condiciones</span></a>
+            </div>
+        </div>
+        <div class="promocion">
+            <img class="img-promocion" src="https://ilpala.weebly.com/uploads/7/5/0/8/7508973/1461002944.png" alt="promocion-2">
+            <div class="text-promocion">
+                <p class="titulo-promocion">MEGABANQUETE + CHAUFA</p>
+                <div class="content-especificacion">
+                    <div class="text-descripcion">
+                        <p>CYBER MEGABANQUETE + CHAUFA</p>
+                    </div>
+                    <div class="text-precio">
+                        <p>S/95.90</p>
+                    </div>
+                </div>
+                <a class="link-combo" href="#"><button class="btn-promocion">Comprar</button></a>
+                <a class="link-terminos" href="#"><span>Terminos y condiciones</span></a>
+            </div>
+        </div>
+        <div class="promocion">
+            <img class="img-promocion" src="https://gestion.pe/resizer/bodZRggxNDfCz6upbEVfpsLqUbk=/1200x800/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/WKLKU6YQTJEZJLSWM3CUZZ37AA.jpg" alt="promocion-3">
+            <div class="text-promocion">
+                <p class="titulo-promocion">POLLO + PAPAS</p>
+                <div class="content-especificacion">
+                    <div class="text-descripcion">
+                        <p>CYBER ROKYS 1 POLLO + PAPA</p>
+                    </div>
+                    <div class="text-precio">
+                        <p>S/59.90</p>
+                    </div>
+                </div>
+                <a class="link-combo" href="#"><button class="btn-promocion">Comprar</button></a>
+                <a class="link-terminos" href="#"><span>Terminos y condiciones</span></a>
+            </div>
+        </div>
+        <div class="promocion">
+            <img class="img-promocion" src="https://portal.andina.pe/EDPFotografia3/thumbnail/2021/03/02/000753750M.jpg" alt="promocion-4">
+            <div class="text-promocion">
+                <p class="titulo-promocion">MEGA PROMOCION</p>
+                <div class="content-especificacion">
+                    <div class="text-descripcion">
+                        <p>1 POLLO + ENSALADA + 1/4 POLLO + GASEOSA 1.5 L + PAPA + SALSAS</p>
+                    </div>
+                    <div class="text-precio">
+                        <p>S/75.90</p>
+                    </div>
+                </div>
+                <a class="link-combo" href="#"><button class="btn-promocion">Comprar</button></a>
+                <a class="link-terminos" href="#"><span>Terminos y condiciones</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="content-promocion2">
+        <div class="promocion">
+            <img class="img-promocion" src="https://content.emarket.pe/common/collections/standard/ad/47/ad479fed-d307-49d4-b4dc-6d038d66b488.jpg" alt="promocion-1">
+            <div class="text-promocion">
+                <p class="titulo-promocion">1/4 DE POLLO + PAPAS</p>
+                <div class="content-especificacion">
+                    <div class="text-descripcion">
+                        <p>CYBER ROKYS 1/4 POLLO + PAPAS</p>
+                    </div>
+                    <div class="text-precio">
+                        <p>S/21.90</p>
+                    </div>
+                </div>
+                <a class="link-combo" href="#"><button class="btn-promocion">Comprar</button></a>
+                <a class="link-terminos" href="#"><span>Terminos y condiciones</span></a>
+            </div>
+        </div>
+        <div class="promocion">
+            <img class="img-promocion" src="https://ilpala.weebly.com/uploads/7/5/0/8/7508973/1461002944.png" alt="promocion-2">
+            <div class="text-promocion">
+                <p class="titulo-promocion">MEGABANQUETE + CHAUFA</p>
+                <div class="content-especificacion">
+                    <div class="text-descripcion">
+                        <p>CYBER MEGABANQUETE + CHAUFA</p>
+                    </div>
+                    <div class="text-precio">
+                        <p>S/95.90</p>
+                    </div>
+                </div>
+                <a class="link-combo" href="#"><button class="btn-promocion">Comprar</button></a>
+                <a class="link-terminos" href="#"><span>Terminos y condiciones</span></a>
+            </div>
+        </div>
+        <div class="promocion">
+            <img class="img-promocion" src="https://gestion.pe/resizer/bodZRggxNDfCz6upbEVfpsLqUbk=/1200x800/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/WKLKU6YQTJEZJLSWM3CUZZ37AA.jpg" alt="promocion-3">
+            <div class="text-promocion">
+                <p class="titulo-promocion">POLLO + PAPAS</p>
+                <div class="content-especificacion">
+                    <div class="text-descripcion">
+                        <p>CYBER ROKYS 1 POLLO + PAPA</p>
+                    </div>
+                    <div class="text-precio">
+                        <p>S/59.90</p>
+                    </div>
+                </div>
+                <a class="link-combo" href="#"><button class="btn-promocion">Comprar</button></a>
+                <a class="link-terminos" href="#"><span>Terminos y condiciones</span></a>
+            </div>
+        </div>
+        <div class="promocion">
+            <img class="img-promocion" src="https://portal.andina.pe/EDPFotografia3/thumbnail/2021/03/02/000753750M.jpg" alt="promocion-4">
+            <div class="text-promocion">
+                <p class="titulo-promocion">MEGA PROMOCION</p>
+                <div class="content-especificacion">
+                    <div class="text-descripcion">
+                        <p>1 POLLO + ENSALADA + 1/4 POLLO + GASEOSA 1.5 L + PAPA + SALSAS</p>
+                    </div>
+                    <div class="text-precio">
+                        <p>S/75.90</p>
+                    </div>
+                </div>
+                <a class="link-combo" href="#"><button class="btn-promocion">Comprar</button></a>
+                <a class="link-terminos" href="#"><span>Terminos y condiciones</span></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

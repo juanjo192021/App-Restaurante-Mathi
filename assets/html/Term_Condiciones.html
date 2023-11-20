@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <script src="https://kit.fontawesome.com/abf5d5b8a0.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Terminos y Condiciones</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <script src="https://kit.fontawesome.com/abf5d5b8a0.js" crossorigin="anonymous"></script>
+    </head>
 <body>
+    <style>
+        .custom-margin {
+            margin-left: 340px;  
+            margin-right: 340px; 
+        }
+    </style>
+    
     <header>
         <nav class="navbar p-0 navbar-expand-md navbar-light bg-white sticky-top border-bottom box-shadow">
             <div class=" bg-dark container-fluid px-3 py-1 flex-nowrap" id="id-nav-subcontainer">
                 <div class="container-fluid p-0 text-center" id="id_container-img-home">
                     <div class="row align-items-center">
                         <div class="col-2 px-1 d-flex justify-content-start">
-                            <a href="../../principal.html">
-                                <img class="logo-restaurante" src="../Imagenes/icon-restaurant.png" alt="">
-                            </a>
+                            <img class="logo-restaurante" src="https://d3uqmu8cgrse7a.cloudfront.net/dist/client/img/d7139db.svg" alt="">
                         </div>
                         <div class="col-6 col-sm-6 col-md-7 pe-0 d-flex justify-content-center justify-content-sm-end justify-content-lg-end ">
                             <form class="d-flex justify-content-start align-items-center" id="id-container-buscar">
@@ -37,7 +37,7 @@
                         <div class="col-4 col-sm-4 col-md-3 d-flex justify-content-center justify-content-md-end align-items-center">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div class="class-icons-nav mx-1 mx-sm-3" id="id-logo-cart">
-                                    <a class="nav-link text-white" id="id-link-listaCarrito" href="@Url.Action("Carrito","Tienda")">
+                                    <a class="nav-link text-white" id="id-link-listaCarrito" href="">
                                         <span class="d-none">UBICACIONES</span>
                                         <i class="d-none d-sm-inline logo-navs fa-solid fa-location-dot me-1"></i>
                                     </a>
@@ -53,7 +53,7 @@
                                         <li class="nav-item dropdown class-li-inicio">
                                             <a class="nav-link dropdown-toggle" id="id-link-inicioSesion" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="logo-navs fa-solid fa-circle-user"></i></a>
                                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="#!"><b>Iniciar Sesion</b></a></li>
+                                                <li><a class="dropdown-item" href="assets/html/IniciarSesion.html"><b>Iniciar Sesion</b></a></li>
                                                 <li><a class="dropdown-item" href="#!">Registrate</a></li>
                                                 <!-- <li><hr class="dropdown-divider"/></li>
                                                 <li><a class="dropdown-item" href="#!">Cerrar Sesion</a></li> -->
@@ -68,40 +68,81 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="row justify-content-center my-5">
-            <div class="col-5">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="text-center">Iniciar Sesion</h3>
-                    </div>
-                    <div class="card-body">
-                        <form action="@Url.Action("Login","Acceso")" method="post">
-                           
-                            <div class="mb-3">
-                                <label asp-for="correo" class="form-label">Correo Electrónico</label>
-                                <input asp-for="correo" type="email" class="form-control" name="correo" autocomplete="off" />
-                                <span asp-validation-for="correo" class="text-danger"></span>
-                            </div>
-                            <div class="mb-3">
-                                <label asp-for="clave">Contraseña</label>
-                                <input asp-for="clave" type="password" class="form-control" name="clave" autocomplete="off" />
-                                <span asp-validation-for="clave" class="text-danger"></span>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-grid">
-                                    <button class="btn btn-primary" type="submit">Ingresar</button>
-                                    <a class="btn btn-link" asp-controller="Acceso" asp-action="Registrar">No tienes cuenta? Registrate!</a>
-        
-                                    <a class="btn btn-link" href="@Url.Action("Restablecer","Acceso" )">Has olvidado tu contraseña?</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+
+    <br>
+    <p class="text-center fw-bold fst-normal text-decoration-underline">TÉRMINOS Y CONDICIONES DE USO DEL SITIO WEB</p>
+
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Los siguientes términos y condiciones de <strong>Donde Mathi S.A.C.</strong> (en adelante <strong>“Donde Mathi”</strong>) rigen el uso que usted le dé a este sitio web y a cualquiera de los contenidos disponibles por o a través de este sitio web, incluyendo cualquier contenido derivado del mismo, por lo que decimos:
+    </p>
+
+    <p class="fw-normal fw-bold custom-margin">Condiciones de uso</p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        El usuario del sitio Web se compromete a leer detenidamente los términos y condiciones generales, antes de utilizar los portales y servicios Web que ofrece Donde Mathi. Ello implica que usted acepta expresamente los términos y condiciones generales. En caso de no aceptarlos, se le solicita que no haga uso, ni acceda, ni manipule la información de los servicios ofrecidos por el sitio Web, ya que usted (usuario) está haciendo un uso inadecuado de éste.
+    </p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        El propósito del sitio Web es la promoción y divulgación de las actividades comerciales relacionadas al servicio de alimentación y/o entretenimiento, promociones y/o eventos corporativos, por lo que está dirigido al público en general.
+    </p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Para sugerencias y/o comentarios sobre los términos y condiciones de uso de nuestro sitio Web pueden comunicarse a la siguiente dirección electrónica: 
+        <a href="mailto:servicioalcliente@dondemathi.com">servicioalcliente@dondemathi.com</a>
+    </p>
+   
+    <p class="fw-normal fw-bold custom-margin">Derechos de Propiedad Intelectual</p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Todos los derechos de propiedad intelectual de la página Web son de propiedad de Donde Mathi. Se prohíbe el uso de cualquier derecho de propiedad intelectual sin contar con el consentimiento previo, expreso y por escrito de aquella.
+    </p>
+
+    <br><br>
+
+    <p class="fw-normal fw-bold custom-margin">Derechos de Autor</p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Este sitio se encuentra protegido por la normativa vigente sobre derechos de autor. Todos los derechos involucrados, como por ejemplo su contenido y su diseño visual, son de titularidad de Donde Mathi, por lo que se encuentra estrictamente prohibido su empleo, modificación, reproducción, distribución, transmisión o comercialización de los derechos involucrados sin el permiso previo, expreso y por escrito de Donde Mathi.
+    </p>
+    
+    <p class="fw-normal fw-bold custom-margin">Signos distintivos y patentes</p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Todos los signos distintivos (marcas de productos y de servicio, lemas comerciales y nombres comerciales) y patentes registrados de acuerdo a la legislación nacional y supranacional, son propiedad de Donde Mathi, a menos que se indique lo contrario.
+    </p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Se prohíbe el uso de cualquier elemento de propiedad intelectual de Donde Mathi sin el consentimiento expreso y por escrito previo pertinente.
+    </p>
+    
+    <p class="fw-normal fw-bold custom-margin">Aceptación de términos</p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Los sitios Web y referencias están disponibles para que el usuario bajo su responsabilidad los utilice adecuadamente sin aprovecharse de alguna falla que ocurra y saque provecho de la misma.
+    </p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Los cambios y actualizaciones en los términos y condiciones de uso serán comunicados en nuestro sitio Web oportunamente para que todos los usuarios se informen de los términos y condiciones de uso vigente. Está bajo la responsabilidad del usuario enterarse de los nuevos cambios y restringirse a cumplir como normativa del sitio Web.
+    </p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        La información de los servicios de alimentación y/o entretenimiento, promociones y/o eventos corporativos, serán de carácter público para todos los usuarios en el sitio Web, por lo que estos últimos serán responsables del uso adecuado del manejo de la información.
+    </p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Queda prohibido el uso del nombre, logotipos, marcas, diseños o cualquier signo distintivo de autoría de Donde Mathi como enlaces de hipertexto o hipervínculos a páginas no controladas por la misma, sin previa y expresa autorización de Donde Mathi.
+    </p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Las políticas de uso y recopilación de información de Donde Mathi con respecto a la privacidad de dicha Información del Usuario se establecen en la Política de Privacidad del servicio Web, de la empresa.
+    </p>
+
+    <p class="fw-normal fw-bold custom-margin">Obligaciones de los usuarios en general</p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        El acceso de los servicios Web son carácter público en zonas públicas de la Web donde la información entregada es de la referida empresa Donde Mathi.
+    </p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        El usuario se obliga a utilizar los servicios y contenidos que le proporciona el portal conforme a la legislación vigente y a los principios de buena fe y usos generalmente aceptados y a no contravenir con su actuación a través de la Web.
+    </p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        El usuario se compromete a suministrar información verdadera y exacta acerca de él mismo en los formularios de registro del servicio Web de Donde Mathi, en ese sentido, reconoce y acepta ser el único responsable de la exactitud del contenido de la Información del mismo.
+    </p>
+
+    <p class="fw-normal fw-bold custom-margin">Modificaciones a los Términos y Condiciones</p>
+    <p style="text-align: justify;" class="fw-normal lh-sm custom-margin">
+        Donde Mathi se reserva el derecho de modificar el contenido y alcance de los presentes Términos y Condiciones en cualquier momento y según lo considere necesario. El Usuario estará obligado a sujetarse a dichas modificaciones, una vez que éstas entren en vigor.
+    </p>
+
+    <br><br>
+
     <footer class="position-static border-top footer text-muted bg-dark" id="id-footer-container">
         <div class="container-fluid text-center text-md-start">
             <div class="row text-center text-md-start">
@@ -237,5 +278,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>
